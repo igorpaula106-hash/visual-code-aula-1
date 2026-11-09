@@ -22,6 +22,25 @@
     <button><a href="telas/parImpar.php">Verificar Par ou Ímpar</a></button><br>
     <button><a href="telas/areaTriangulo.php">Área do Triângulo</a></button><br>
     <button><a href="telas/volumeCaixa.php">Volume da Caixa Retangular</a></button><br>
-    
+    <button><a href="telas/quadradoCubo.php">Quadrado e Cubo</a></button><br>
+    <button><a href="telas/velocidadeMedia.php">Velocidade Média</a></button><br>
+    <button><a href="telas/mediaAritmetica.php">Média Aritmética</a></button><br>
+    <button><a href="telas/calcularSalario.php">Calcular Salário Mensal</a></button><br>
+    <button><a href="telas/idadeDias.php">Converter Idade em Dias</a></button><br>
+    <button><a href="telas/tempoAteCem.php">Tempo até 100 Anos</a></button><br>
+    <button><a href="telas/somaEMedia.php">Soma e Média de 3 Números</a></button><br>
+    <button><a href="telas/areaTrapezio.php">Área do Trapézio</a></button><br>
+    <button><a href="telas/diasSegundos.php">Dias para Segundos</a></button><br>
+    <button><a href="telas/somarDigitos.php">Soma dos Dígitos</a></button><br>
+    <button><a href="telas/inversoMultiplicativo.php">Inverso Multiplicativo</a></button><br>
+    <button><a href="telas/hipotenusa.php">Calcular Hipotenusa</a></button><br>
+    <button><a href="telas/binario.php">Converter para Binário</a></button><br>
+    <button><a href="telas/hexadecimal.php">Converter para Hexadecimal</a></button><br>
+    <button><a href="telas/raizCubica.php">Raiz Cúbica</a></button><br>
+    <button><a href="telas/jurosSimples.php">Juros Simples</a></button><br>
+    <button><a href="telas/jurosCompostos.php">Juros Compostos</a></button><br>
+    <button><a href="telas/grausRadianos.php">Graus para Radianos</a></button><br>
+
+
 </body>
 </html>

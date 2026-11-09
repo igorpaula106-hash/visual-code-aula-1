@@ -122,10 +122,141 @@ public function quadradoECubo(float $numero){
     $quadrado = pow($numero, 2);
     $cubo = pow($numero, 3);
     
-    $this->resultado = "Quadrado de $numero = $quadrado <br><br> Cubo de $numero = $cubo";
+    return "Quadrado de $numero = $quadrado <br><br> Cubo de $numero = $cubo";
+}
+
+public function velocidadeMedia(float $distancia, float $tempo){
+    if($tempo <= 0){
+        return "O tempo deve ser maior que zero!";
+    }
+    $this->resultado = $distancia / $tempo;
+    return round($this->resultado, 2);
+}
+
+public function mediaAritmetica(float $num1, float $num2){
+    $this->resultado = ($num1 + $num2) / 2;
     return $this->resultado;
 }
 
+public function calcularSalario(float $valorHora, float $horasTrabalhadas){
+    if($valorHora <= 0 || $horasTrabalhadas <= 0){
+        return "Os valores devem ser maiores que zero!";
+    }
+    $this->resultado = $valorHora * $horasTrabalhadas;
+    return number_format($this->resultado, 2, ',', '.'); 
+}
+
+public function anosParaDias(int $anos){
+    if($anos < 0){
+        return "A idade não pode ser negativa!";
+    }
+    $this->resultado = $anos * 365;
+    return $this->resultado;
+}
+
+public function tempoAteCemAnos(int $idade){
+    if($idade < 0){
+        return "A idade não pode ser negativa!";
+    }
+    if($idade >= 100){
+        return "Você já tem 100 anos ou mais!";
+    }
+    $this->resultado = 100 - $idade;
+    return $this->resultado;
+}
+
+public function somaEMediaTresNumeros(float $n1, float $n2, float $n3){
+    $soma = $n1 + $n2 + $n3;
+    $media = $soma / 3;
     
+    return "Soma = $soma <br><br> Média = " . round($media, 2);
+}
+
+public function areaTrapezio(float $baseMaior, float $baseMenor, float $altura){
+    if($baseMaior <= 0 || $baseMenor <= 0 || $altura <= 0){
+        return "Os valores devem ser maiores que zero!";
+    }
+    $this->resultado = (($baseMaior + $baseMenor) * $altura) / 2;
+    return $this->resultado;
+}
+
+public function diasParaSegundos(int $dias){
+    if($dias < 0){
+        return "A quantidade de dias não pode ser negativa!";
+    }
+    $this->resultado = $dias * 86400;
+    return $this->resultado;
+}
+
+public function somarDigitos(int $numero){
+    $numeroStr = (string) abs($numero); 
+    $soma = 0;
+
+    for($i = 0; $i < strlen($numeroStr); $i++){
+        $soma += (int) $numeroStr[$i];
+    }
+
+    return $soma;
+}
+
+public function inversoMultiplicativo(float $numero){
+    if($numero == 0){
+        return "Impossível calcular o inverso multiplicativo de zero!";
+    }
+    $this->resultado = 1 / $numero;
+    return $this->resultado;
+}
+
+public function calcularHipotenusa(float $cateto1, float $cateto2){
+    if($cateto1 <= 0 || $cateto2 <= 0){
+        return "Os catetos devem ser maiores que zero!";
+    }
+    $this->resultado = hypot($cateto1, $cateto2);
+    return round($this->resultado, 2);
+}
+  
+public function converterBinario(int $numero){
+    if($numero < 0){
+        return "Informe um número inteiro positivo ou zero!";
+    }
+    return decbin($numero);
+}
+
+public function converterHexadecimal(int $numero){
+    if($numero < 0){
+        return "Informe um número inteiro positivo ou zero!";
+    }
+    return strtoupper(dechex($numero));
+}
+
+public function jurosSimples(float $capital, float $taxa, float $tempo){
+    if($capital <= 0 || $taxa < 0 || $tempo <= 0){
+        return "Informe valores válidos para o cálculo!";
+    }
+    
+    $juros = $capital * ($taxa / 100) * $tempo;
+    $this->resultado = $capital + $juros;
+    
+    return round($this->resultado, 2);
+}
+
+public function jurosCompostos(float $capital, float $taxa, float $tempo){
+    if($capital <= 0 || $taxa < 0 || $tempo <= 0){
+        return "Informe valores válidos para o cálculo!";
+    }
+    
+    $taxaDecimal = $taxa / 100;
+    
+    $this->resultado = $capital * pow((1 + $taxaDecimal), $tempo);
+    
+    return round($this->resultado, 2);
+}
+
+public function grausParaRadianos(float $graus){
+    $this->resultado = deg2rad($graus);
+    return round($this->resultado, 4);
+}
+
+
     }//fim da classe
 ?>
