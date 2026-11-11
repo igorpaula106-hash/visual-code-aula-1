@@ -40,6 +40,17 @@
     <button><a href="telas/jurosSimples.php">Juros Simples</a></button><br>
     <button><a href="telas/jurosCompostos.php">Juros Compostos</a></button><br>
     <button><a href="telas/grausRadianos.php">Graus para Radianos</a></button><br>
+    <button><a href="telas/porcentagem.php">Converter para Porcentagem</a></button><br>
+    <button><a href="telas/mediaPonderada.php">Média Ponderada</a></button><br>
+    <button><a href="telas/parteInteiraDecimal.php">Parte Inteira e Decimal</a></button><br>
+    <button><a href="telas/rendimentoSaldo.php">saldo do rendimento</a></button><br>
+     <button><a href="telas/gastoEnergia.php">gasto</a></button><br>
+     <button><a href="telas/fahrenheitCelsius.php">Fahrenheit para Celsius</a></button><br>
+     <button><a href="telas/densidade.php">Calcular Densidade</a></button><br>
+     <button><a href="telas/multiploDez.php">Múltiplo Mais Próximo de 10</a></button><br>
+     <button><a href="telas/octal.php">Converter para Octal</a></button><br>
+     <button><a href="telas/contagemCrescente.php">Contagem Crescente (FOR)</a></button><br>
+
 
 
 </body>

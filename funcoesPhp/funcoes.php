@@ -257,6 +257,102 @@ public function grausParaRadianos(float $graus){
     return round($this->resultado, 4);
 }
 
+public function converterPorcentagem(float $valor){
+    $this->resultado = $valor * 100;
+    return $this->resultado;
+}
+
+public function mediaPonderada(float $n1, float $p1, float $n2, float $p2, float $n3, float $p3){
+    $somaPesos = $p1 + $p2 + $p3;
+    
+    if($somaPesos <= 0){
+        return "A soma dos pesos deve ser maior que zero!";
+    }
+    
+    $this->resultado = (($n1 * $p1) + ($n2 * $p2) + ($n3 * $p3)) / $somaPesos;
+    return round($this->resultado, 2);
+}
+
+public function separarParteInteiraDecimal(float $numero){
+    $parteInteira = (int) $numero;
+    $parteDecimal = round(abs($numero - $parteInteira), 6);
+    
+    return "Parte inteira: $parteInteira <br> Parte decimal: $parteDecimal";
+}
+
+
+public function rendimentoSaldo(float $saldo){
+    if($saldo < 0){
+        return "O saldo não pode ser negativo!";
+    }
+    
+    $taxaFixa = 0.05;
+    $this->resultado = $saldo + ($saldo * $taxaFixa);
+    
+    return round($this->resultado, 2);
+}
+
+public function gastoEnergia(float $potenciaWatts, float $horasUso){
+    if($potenciaWatts <= 0 || $horasUso <= 0){
+        return "A potência e o tempo de uso devem ser maiores que zero!";
+    }
+    
+    $this->resultado = ($potenciaWatts * $horasUso) / 1000;
+    return round($this->resultado, 2);
+}
+
+    public function fahrenheitParaCelsius(float $fahrenheit){
+    $this->resultado = ($fahrenheit - 32) * (5 / 9);
+    return round($this->resultado, 2);
+}
+    public function calcularDensidade(float $massa, float $volume){
+    if($massa <= 0 || $volume <= 0){
+        return "A massa e o volume devem ser maiores que zero!";
+    }
+    
+    $this->resultado = $massa / $volume;
+    return round($this->resultado, 2);
+}
+
+public function multiploMaisProximoDeDez(float $numero){
+    $this->resultado = round($numero / 10) * 10;
+    return $this->resultado;
+}
+
+public function converterOctal(int $numero){
+    if($numero < 0){
+        return "Informe um número inteiro positivo ou zero!";
+    }
+    return decoct($numero);
+
+
+} 
+
+public function contagemCrescente(int $numero){
+    if($numero <= 0){
+        return "Informe um número inteiro positivo maior que zero!";
+    }
+
+    $sequencia = "";
+    for($i = 1; $i <= $numero; $i++){
+        $sequencia .= $i . " ";
+    }
+
+    return trim($sequencia);
+}
+
+public function contagemRegressiva(int $numero){
+    if($numero <= 0){
+        return "Informe um número inteiro positivo maior que zero!";
+    }
+
+    $sequencia = "";
+    for($i = $numero; $i >= 0; $i--){
+        $sequencia .= $i . " ";
+    }
+
+    return trim($sequencia);
+}
 
     }//fim da classe
 ?>
