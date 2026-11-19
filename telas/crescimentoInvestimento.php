@@ -12,6 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soma dos Dígitos (WHILE)</title>
+    <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body>
     <h1>Soma dos Dígitos de um Número</h1>

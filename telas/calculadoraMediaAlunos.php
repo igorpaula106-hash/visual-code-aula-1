@@ -45,6 +45,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Média de Alunos (DO WHILE)</title>
+    <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body>
     <h1>Calculadora de Média de Alunos</h1>

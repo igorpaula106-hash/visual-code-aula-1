@@ -81,18 +81,3 @@
      <button><a href="telas/conversorMoedas.php">Conversor de Moedas (DO WHILE)</a></button><br>
 
      
-
-
-
-
-
-
-
-
-
-     
-
-
-
-</body>
-</html>

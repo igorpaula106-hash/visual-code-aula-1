@@ -30,11 +30,12 @@
     }
 ?>
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adivinhe o Número (WHILE)</title>
+    <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body>
     <h1>Adivinhe o Número Secreto</h1>

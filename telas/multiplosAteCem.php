@@ -12,6 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Múltiplos entre 1 e 100 (FOR)</title>
+    <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body>
     <h1>Exibir Múltiplos entre 1 e 100</h1>

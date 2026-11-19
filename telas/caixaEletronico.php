@@ -43,6 +43,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caixa Eletrônico (DO WHILE)</title>
+    <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body>
     <h1>Simulador de Caixa Eletrônico</h1>
