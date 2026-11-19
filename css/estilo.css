@@ -1,285 +1,163 @@
-/* ==========================================================================
-   Reset & Variáveis Globais
-   ========================================================================== */
-:root {
-    --bg-gradient-start: #0f172a;
-    --bg-gradient-end: #1e293b;
-    --card-bg: #ffffff;
-    --primary: #2563eb;
-    --primary-hover: #1d4ed8;
-    --secondary: #64748b;
-    --secondary-hover: #475569;
-    --danger: #dc2626;
-    --danger-hover: #b91c1c;
-    --text-main: #1e293b;
-    --text-muted: #475569;
-    --border-color: #cbd5e1;
-    --input-bg: #f8fafc;
-    --result-bg: #eff6ff;
-    --result-border: #3b82f6;
-    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.25), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
-    --radius-md: 10px;
-    --radius-lg: 16px;
-}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-/* ==========================================================================
-   Layout Base (Centralizado e Responsivo)
-   ========================================================================== */
 body {
-    min-height: 100vh;
-    background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
-    color: var(--text-main);
+    background-color: #09090b; 
+    color: #f4f4f5;            
+    padding: 40px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    padding: 40px 20px;
+}
+
+
+h1 {
+    width: 100%;
+    max-width: 700px;
+    background-color: #18181b;
+    color: #07364b;
+    font-size: 24px;
+    text-align: center;
+    padding: 25px;
+    border-radius: 12px 12px 0 0;
+    border: 1px solid #27272a;
+    border-bottom: 2px solid #62a7e0;
+}
+
+
+form,
+p,
+.resultado-box {
+    width: 100%;
+    max-width: 700px;
+    background-color: #18181b;
+    padding: 25px;
+    border-left: 1px solid #27272a;
+    border-right: 1px solid #27272a;
+    border-bottom: 1px solid #27272a;
+}
+
+p {
+    color: #a1a1aa;
+    font-size: 15px;
     line-height: 1.6;
 }
 
-/* Container Principal Automático (estiliza o conteúdo sem precisar mudar o HTML) */
-body > h1 {
-    width: 100%;
-    max-width: 720px;
-    background: var(--card-bg);
-    color: #0f172a;
-    font-size: 1.65rem;
-    font-weight: 700;
-    padding: 28px 32px 18px 32px;
-    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-    border-bottom: 2px solid #e2e8f0;
-    text-align: center;
-    box-shadow: var(--shadow-lg);
-}
 
-/* Bloco principal que envolve parágrafos e formulários logo abaixo do H1 */
-body > p,
-body > form,
-body > strong,
-body > .resultado-box {
-    width: 100%;
-    max-width: 720px;
-    background: var(--card-bg);
-    padding: 20px 32px;
-    box-shadow: var(--shadow-lg);
-}
-
-body > p {
-    color: var(--text-muted);
-    background: #f8fafc;
-    border-bottom: 1px solid #e2e8f0;
-    font-size: 0.95rem;
-}
-
-/* Arredondamento inferior no último elemento da página */
-body > *:last-child {
-    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
-    padding-bottom: 32px;
-}
-
-/* Caso exista apenas H1 e um único bloco */
-body > h1:only-child {
-    border-radius: var(--radius-lg);
-}
-
-/* ==========================================================================
-   Menu Principal (index.php — Lista de Botões com Links)
-   ========================================================================== */
-body.menu-principal {
-    max-width: 100%;
-}
-
-/* Estiliza os botões do index.php que contêm <a href="..."> */
-button:has(a) {
-    width: 100%;
-    max-width: 720px;
-    background: var(--card-bg);
-    border: none;
-    padding: 0;
-    margin: 0;
-    border-radius: 0;
-    box-shadow: var(--shadow-lg);
-    display: block;
-    transition: transform 0.15s ease, background-color 0.2s ease;
-}
-
-button:has(a) a {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 15px 28px;
-    text-decoration: none;
-    color: var(--text-main);
-    font-weight: 600;
-    font-size: 1rem;
-    border-bottom: 1px solid #f1f5f9;
-    transition: all 0.2s ease;
-}
-
-button:has(a) a::after {
-    content: "→";
-    font-size: 1.15rem;
-    color: var(--primary);
-    transition: transform 0.2s ease;
-}
-
-button:has(a) a:hover {
-    background-color: #eff6ff;
-    color: var(--primary);
-    padding-left: 34px;
-}
-
-button:has(a) a:hover::after {
-    transform: translateX(5px);
-}
-
-/* Remove quebras de linha <br> extras entre os botões do menu */
-body > br {
-    display: none;
-}
-
-/* ==========================================================================
-   Formulários, Inputs e Selects
-   ========================================================================== */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-form br {
-    display: none;
-}
 
 label {
-    font-weight: 600;
-    font-size: 0.92rem;
-    color: #334155;
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    color: #e4e4e7;
+    margin-bottom: 6px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    background-color: #09090b;
+    color: #ffffff;
+    border: 1px solid #3f3f46;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #a80b05;
+}
+
+
+button {
+    width: 100%;
+    max-width: 700px;
+    background-color: #18181b;
+    border: 1px solid #27272a;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
+button a {
+    display: block;
+    width: 100%;
+    padding: 14px 20px;
+    color: #f4f4f5;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+}
+
+button:hover {
+    background-color: #27272a;
+    border-color: #38bdf8;
+}
+
+button a:hover {
+    color: #c41313;
+}
+
+
+button[type="submit"] {
+    background-color: #38bdf8;
+    color: #09090b;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px;
+    border: none;
     margin-top: 10px;
 }
 
-input[type="text"],
-input[type="number"],
-input[type="password"],
-select {
-    width: 100%;
-    padding: 12px 14px;
-    font-size: 1rem;
-    color: var(--text-main);
-    background-color: var(--input-bg);
-    border: 1.5px solid var(--border-color);
-    border-radius: var(--radius-md);
-    outline: none;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
-}
-
-input[type="text"]:focus,
-input[type="number"]:focus,
-input[type="password"]:focus,
-select:focus {
-    background-color: #ffffff;
-    border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
-}
-
-/* ==========================================================================
-   Botões de Ação (Submit e Reiniciar)
-   ========================================================================== */
-button[type="submit"] {
-    margin-top: 16px;
-    padding: 13px 22px;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #ffffff;
-    background: var(--primary);
-    border: none;
-    border-radius: var(--radius-md);
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
-    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.3);
-}
-
 button[type="submit"]:hover {
-    background: var(--primary-hover);
-    transform: translateY(-1px);
-    box-shadow: 0 6px 12px -2px rgba(37, 99, 235, 0.4);
+    background-color: #0ea5e9;
 }
 
-button[type="submit"]:active {
-    transform: translateY(0);
-}
 
-/* Estilo diferenciado para botões de Reiniciar Sessão */
 button[name="reiniciar"] {
-    background: var(--secondary);
-    box-shadow: 0 4px 6px -1px rgba(100, 116, 139, 0.25);
-    margin-top: 4px;
+    background-color: #27272a;
+    color: #f4f4f5;
 }
 
 button[name="reiniciar"]:hover {
-    background: var(--danger);
-    box-shadow: 0 6px 12px -2px rgba(220, 38, 38, 0.35);
+    background-color: #dc2626;
+    color: #ffffff;
 }
 
-/* ==========================================================================
-   Área de Resultados e Mensagens PHP
-   ========================================================================== */
-.resultado-box,
-body > strong {
-    display: block;
-    background: var(--result-bg);
-    border-left: 5px solid var(--result-border);
-    color: #1e3a8a;
-    font-size: 1.02rem;
-    line-height: 1.7;
+
+.resultado-box {
+    background-color: #0f172a;
+    border-left: 4px solid #38bdf8;
+    color: #e0f2fe;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
-/* Link de voltar ao menu (caso adicione nas telas) */
 .btn-voltar {
-    display: inline-block;
+    display: block;
     width: 100%;
-    max-width: 720px;
-    background: #f1f5f9;
-    color: var(--text-muted);
+    max-width: 700px;
+    background-color: #18181b;
+    color: #a1a1aa;
     text-align: center;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 0.92rem;
-    padding: 14px;
-    border-top: 1px solid #e2e8f0;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    padding: 15px;
+    border: 1px solid #27272a;
+    border-radius: 0 0 12px 12px;
+    font-weight: bold;
 }
 
 .btn-voltar:hover {
-    background: #e2e8f0;
-    color: #0f172a;
-}
-
-/* ==========================================================================
-   Responsividade Mobile
-   ========================================================================== */
-@media (max-width: 600px) {
-    body {
-        padding: 20px 12px;
-    }
-
-    body > h1 {
-        font-size: 1.35rem;
-        padding: 22px 20px 14px 20px;
-    }
-
-    body > p,
-    body > form,
-    body > strong,
-    body > .resultado-box {
-        padding: 16px 20px;
-    }
+    color: #38bdf8;
+    background-color: #27272a;
 }
